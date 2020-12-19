@@ -1,5 +1,5 @@
-scipy>=0.11
+scipy>=1.0
 numpy>=1.3
 scikit-learn
-pandas
-deprecated
+pandas>=1.0
+networkx

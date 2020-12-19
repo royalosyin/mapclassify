@@ -1,7 +1,8 @@
-nose
-nose-progressive
-nose-exclude
-coverage
-coveralls
+pytest
+pytest-cov
+codecov
 geopandas
 libpysal
+networkx
+palettable
+

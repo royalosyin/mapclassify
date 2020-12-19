@@ -43,7 +43,8 @@ extensions = [#'sphinx_gallery.gen_gallery',
               'sphinx.ext.doctest',
               'sphinx.ext.intersphinx',
               'numpydoc',
-              'matplotlib.sphinxext.plot_directive']
+              'matplotlib.sphinxext.plot_directive',
+              'nbsphinx']
 
 
 # Add any paths that contain templates here, relative to this directory.
@@ -60,7 +61,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = "mapclassify"  # string of your project name, for example, 'giddy'
-copyright = '2018, pysal developers'
+copyright = '2018-, pysal developers'
 author = 'pysal developers'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -168,6 +169,7 @@ html_theme_options = {
     # Navigation bar menu
     'navbar_links': [
                      ("Installation", "installation"),
+                     ("Tutorial", "tutorial"),
                      ("API", "api"),
                      ("References", "references"),
                      ],
@@ -246,13 +248,16 @@ texinfo_documents = [
 
 # Generate the API documentation when building
 autosummary_generate = True
-numpydoc_show_class_members = True
-class_members_toctree = True
-numpydoc_show_inherited_class_members = True
+numpydoc_show_class_members = False
 numpydoc_use_plots = True
 
 # display the source code for Plot directive
 plot_include_source = True
+
+# automatically document class members
+autodoc_default_options = {
+    'members': True
+}
 
 def setup(app):
     app.add_stylesheet("pysal-styles.css")
